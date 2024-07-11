@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <marquee behavior="Again" direction="">Old Tax Regime :
+            Individuals (Age < 60 years) - 
+            Up to Rs 2,50,000: Nil ||
+            Rs 2,50,001 to Rs 5,00,000: 5% ||
+            Rs 5,00,001 to Rs 10,00,000: 20% ||
+            Above Rs 10,00,000: 30% ||
+            Resident Senior Citizens (Age ≥ 60 years but < 80 years) - 
+            Up to Rs 3,00,000: Nil ||
+            Rs 3,00,001 to Rs 5,00,000: 5% ||
+            Rs 5,00,001 to Rs 10,00,000: 20% ||
+            Above Rs 10,00,000: 30% ||
+            Resident Super Senior Citizens (Age ≥ 80 years) ||
+            Up to Rs 5,00,000: Nil ||
+            Rs 5,00,001 to Rs 10,00,000: 20% ||
+            Above Rs 10,00,000: 30%
+        </marquee>
+        <marquee behavior="Again" direction="">New Tax Regime :
+            Up to ₹2,50,000: Nil ||
+            ₹2,50,001 - ₹5,00,000: 5%
+            ₹5,00,001 - ₹7,50,000: 10% ||
+            ₹7,50,001 - ₹10,00,000: 15% ||
+            ₹10,00,001 - ₹12,50,000: 20% ||
+            ₹12,50,001 - ₹15,00,000: 25% ||
+            Above ₹15,00,001: 30%</marquee>
+        <div id="form-step-1">
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+            <label for="income">Annual Income (₹):</label>
+            <input type="number" id="income" required>
+            <button onclick="goToStep2()">Next</button>
+        </div>
+        <div id="form-step-2" style="display: none;">
+            <label for="deduction-80c">Deduction 80C (₹):
+            <button class="info-button" onclick="showInfo('info-80c')">i</button>
+            <div id="info-80c" class="info-details" style="display: none;">
+                Deduction 80C allows a maximum deduction of ₹1,50,000 for investments in PPF, NSC, life insurance premium, etc.
+            </div></label>
+            <input type="number" id="deduction-80c" required>
+            
+
+            <label for="deduction-80d">Deduction 80D (₹):
+            <button class="info-button" onclick="showInfo('info-80d')">i</button>
+            <div id="info-80d" class="info-details" style="display: none;">
+                Deduction 80D allows a maximum deduction for health insurance premiums. For individuals, it's ₹25,000 and for senior citizens, it's ₹50,000.
+            </div></label>
+            <input type="number" id="deduction-80d" required>
+
+
+            <label for="deduction-80g">Deduction 80G (₹):
+                <button class="info-button" onclick="showInfo('info-80g')">i</button>
+                <div id="info-80g" class="info-details" style="display: none;">
+                    Any donations made to charitable organizations are fully exempt from tax calculations.     
+                </div></label>
+            <input type="number" id="deduction-80g" required>
+
+
+            <label for="deduction-80ccd">Deduction 80CCD (1B) (₹):
+                <button class="info-button" onclick="showInfo('info-80ccd')">i</button>
+                <div id="info-80ccd" class="info-details" style="display: none;">
+                    Tax exemption of up to Rs. 2 lakh for money deposited in the national pension system.
+                </div></label>
+            <input type="number" id="deduction-80ccd" required>
+            
+
+            <label for="deduction-80tta">Deduction 80TTA (₹):
+            <button class="info-button" onclick="showInfo('info-80tta')">i</button>
+            <div id="info-80tta" class="info-details" style="display: none;">
+                Deduction 80TTA allows a deduction up to ₹10,000 for interest income from savings accounts.
+            </div></label>
+            <input type="number" id="deduction-80tta" required>
+
+
+            <label for="deduction-80e">Deduction 80E (₹):
+                <button class="info-button" onclick="showInfo('info-80e')">i</button>
+                <div id="info-80e" class="info-details" style="display: none;">
+                    Interest on education loan enjoys a 100% tax rebate for up to 8 years.
+                </div></label>
+            <input type="number" id="deduction-80e" required>
+
+
+            <label for="deduction-80gg">Deduction 80GG (₹):
+            <button class="info-button" onclick="showInfo('info-80gg')">i</button>
+            <div id="info-80gg" class="info-details" style="display: none;">
+                Tax exemption on income spent towards paying house rent (house rent allowance.)
+            </div></label>
+            <input type="number" id="deduction-80gg" required>
+
+            <label for="deduction-80gg">Deduction 87A (₹):
+                <button class="info-button" onclick="showInfo('info-87a')">i</button>
+                <div id="info-87a" class="info-details" style="display: none;">
+                    Income below Rs. 5 lakh is eligible for a tax rebate of up to Rs. 12,500.
+                </div></label>
+                <input type="number" id="deduction-87a" required>
+
+
+            <button onclick="calculateTax()">Calculate</button>
+        </div>
+        <div id="result" class="result" style="display: none;">
+
+            <p id="conclusion"></p>
+            <button onclick="window.location.reload()">Calculate Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

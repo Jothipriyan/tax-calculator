@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    padding-top: 100px;
+    padding-left: 450px;
+    align-items: center;
+    height: 100vh;
+    max-height: fit-content;
+    justify-content: center;
+}
+
+.container {
+    background-color: #0b0a31;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    max-height: fit-content ;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+h1:hover {
+    color: aqua;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 3px solid #ccc;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00b8b4;
+}
+
+.info-button {
+    background-color: #00b8b4;
+    color: #fff;
+    border: 20px rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 800;
+}
+
+.info-button:hover{
+    color: red;
+    background-color: yellow;
+}
+
+.info-details {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+#conclusion{
+    color: gold;
+}
